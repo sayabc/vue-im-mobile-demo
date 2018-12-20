@@ -11,13 +11,13 @@
     <div class="m-article-main p-sysmsgs">
       <group class="u-list">
         <template v-for="msg in msgList">
+            <!-- v-touch:swipeleft="showDelBtn"
+            v-touch:swiperight="hideDelBtn"           -->
           <cell
             v-if='msg.type ==="applyTeam" || msg.type ==="teamInvite"'
             class="u-list-item"
             :key="msg.idServer"
             :idServer ="msg.idServer"
-            v-touch:swipeleft="showDelBtn"
-            v-touch:swiperight="hideDelBtn"
           >
             <img class="icon" slot="icon" width="24" :src="msg.avatar">
             <div slot="child"  class='g-teamSys'>

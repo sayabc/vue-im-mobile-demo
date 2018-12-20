@@ -40,6 +40,8 @@ Vue.use(ToastPlugin)
 import NavBar from './pages/components/NavBar'
 import cookie from './utils/cookie'
 import pageUtil from './utils/page'
+import md5 from './utils/md5'
+
 
 const sessionHistory = window.sessionStorage
 
@@ -48,6 +50,13 @@ export default {
     return {
       transitionName: 'forward'
     }
+  },
+  mounted () {
+    // 自动登录
+    cookie.delCookie('uid')
+    cookie.delCookie('sdktoken')
+    cookie.setCookie('uid', 'a88')
+    cookie.setCookie('sdktoken', md5('123456'))
   },
   watch: {
     // 更新页面所在位置，用于判断是前进页还是后退页

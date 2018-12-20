@@ -16,8 +16,8 @@
         :userInfos="userInfos"
         :myInfo="myInfo"
         :isHistory='true'
-        v-touch:swipedown="loadMore"
       ></chat-list>
+        <!-- v-touch:swipedown="loadMore"       -->
     </div>
   </div>
 </template>

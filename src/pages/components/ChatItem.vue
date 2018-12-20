@@ -16,8 +16,8 @@
       :time="msg.time"
       :flow="msg.flow"
       :type="msg.type"
-      v-touch:hold="revocateMsg"
     >
+      <!-- v-touch:hold="revocateMsg" -->
       <a class="msg-head" v-if="msg.avatar" :href="msg.link">
         <img class="icon u-circle" :src="msg.avatar">
       </a>

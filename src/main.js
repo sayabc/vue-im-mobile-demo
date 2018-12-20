@@ -6,8 +6,8 @@ import router from './router'
 import store from './store'
 
 // 添加手势触摸事件，使用方法如 v-touch:swipeleft
-import VueTouch from './plugins/touchEvent'
-Vue.use(VueTouch)
+// import VueTouch from './plugins/touchEvent'
+// Vue.use(VueTouch)
 
 require('./utils/polyfill')
 
