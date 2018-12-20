@@ -77,7 +77,7 @@ export default {
       var groups = []
       for (const key in map) {
         groups.push({
-          letter: key, 
+          letter: key,
           arr: map[key]
         })
       }
@@ -113,7 +113,7 @@ export default {
     onNext() {
       if (this.selected.length<1) {
         this.$toast('未选择成员')
-        return 
+        return
       }
       if (this.teamId==="0") {
         // 创建群模式
@@ -129,7 +129,7 @@ export default {
         return friend.account
       })
       this.$store.dispatch('delegateTeamFunction', {
-        functionName: 'addTeamMembers', 
+        functionName: 'addTeamMembers',
         options: {
           teamId: this.teamId,
           accounts: accounts,
@@ -166,7 +166,7 @@ export default {
       }
       this.$store.dispatch('showLoading')
       this.$store.dispatch('delegateTeamFunction',{
-        functionName: 'createTeam', 
+        functionName: 'createTeam',
         options: {
           type: type,
           name: name,
@@ -182,7 +182,7 @@ export default {
                 history.replaceState(null, null, '#/contacts')
               } else {
                 history.go(-1)
-              } 
+              }
               setTimeout(() => {
                 location.href = `#/chat/team-${obj.team.teamId}`
                 this.$store.dispatch('hideLoading')
@@ -196,7 +196,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-teaminvite {
     display: flex;
     flex-direction: column;
@@ -242,7 +242,7 @@ export default {
         height: 2.5rem;
         margin: auto .3rem;
         padding: 0;
-        flex-shrink: 0;   
+        flex-shrink: 0;
       }
     }
     .m-group {

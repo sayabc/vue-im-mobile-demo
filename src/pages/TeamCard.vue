@@ -60,7 +60,7 @@ export default {
       this.$vux.confirm.prompt('限十字以内', {
         title: '请输入验证信息',
         closeOnConfirm: false,
-        inputAttrs: { 
+        inputAttrs: {
           maxlength:'10'
         },
         onConfirm: (msg) => {
@@ -95,11 +95,11 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .g-body {
     margin-top: 5rem;
     text-align: center;
-    
+
     div {
       margin: 1rem auto;
     }

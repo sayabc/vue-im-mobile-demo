@@ -1,12 +1,14 @@
-/* 
+/*
  * 聊天室SDK，依赖于nim sdk
  */
 
-import config from '@/configs'
+import CONFIG from '@/configs'
 import pageUtil from '@/utils/page'
 import util from '@/utils'
 import store from '../'
 import {onChatroomMsgs} from './chatroomMsgs'
+
+const config = CONFIG
 
 const SDK = require('@/sdk/' + config.sdk)
 
@@ -71,7 +73,7 @@ export function initChatroomSDK ({ state, commit, dispatch }, obj) {
           }
         },
         // 聊天室消息
-        onmsgs: onChatroomMsgs 
+        onmsgs: onChatroomMsgs
       })
     }
   } else {

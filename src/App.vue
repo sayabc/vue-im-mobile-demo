@@ -100,3 +100,6 @@ export default {
 }
 </script>
 
+<style lang='scss'>
+@import './themes/theme.scss';
+</style>

@@ -145,12 +145,12 @@ export default {
         return this.$store.state.teamlist.find(team=>{
           return team.teamId === teamId
         })
-      } 
+      }
       return undefined
     },
     muteInTeam(){
       if(this.scene!=='team') return false
-      var teamMembers = this.$store.state.teamMembers 
+      var teamMembers = this.$store.state.teamMembers
       var Members = teamMembers && teamMembers[this.teamInfo.teamId]
       var selfInTeam = Members && Members.find(item=>{
         return item.account === this.$store.state.userUID
@@ -162,7 +162,7 @@ export default {
         return !(this.teamInfo && this.teamInfo.validToCurrentUser)
       }
       return false
-    }, 
+    },
     sendInvalidHint() {
       if (this.scene==='team' && this.teamInvalid) {
         return `您已不在该${this.teamInfo && this.teamInfo.type==='normal'? '讨论组':'群'}，不能发送消息`
@@ -207,7 +207,7 @@ export default {
   }
 }
 </script>
-<style scoped>
+<style lang='scss' scoped>
 .g-window .m-tab .m-tab-right{
   width: 5rem;
   right: -1rem;

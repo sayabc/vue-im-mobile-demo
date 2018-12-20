@@ -2,8 +2,8 @@
  * SDK连接相关
  */
 
-import config from '@/configs'
-import pageUtil from '@/utils/page'
+import CONFIG from '@/configs/index'
+// import pageUtil from '@/utils/page'
 import util from '@/utils'
 import store from '../'
 import {onFriends, onSyncFriendAction} from './friends'
@@ -13,9 +13,12 @@ import {onMyInfo, onUserInfo} from './userInfo'
 import {onSessions, onUpdateSession} from './session'
 import {onRoamingMsgs, onOfflineMsgs, onMsg} from './msgs'
 import {onSysMsgs, onSysMsg, onSysMsgUnread, onCustomSysMsgs} from './sysMsgs'
-import { onTeams, onSynCreateTeam, onCreateTeam, onUpdateTeam, onTeamMembers, onUpdateTeamMember, onAddTeamMembers, onRemoveTeamMembers, onUpdateTeamManagers, onDismissTeam, onUpdateTeamMembersMute, onTeamMsgReceipt} from './team'
+import { onTeams, onSynCreateTeam, onCreateTeam, onUpdateTeam, onTeamMembers, onUpdateTeamMember, onAddTeamMembers,
+  onRemoveTeamMembers, onUpdateTeamManagers, onDismissTeam, onUpdateTeamMembersMute, onTeamMsgReceipt} from './team'
 
+const config = CONFIG
 const SDK = require('@/sdk/' + config.sdk)
+const WebRTCSDK = require('@/sdk/' + config.webrtcSDK)
 
 // 重新初始化 NIM SDK
 export function initNimSDK ({ state, commit, dispatch }, loginInfo) {
@@ -24,17 +27,15 @@ export function initNimSDK ({ state, commit, dispatch }, loginInfo) {
   }
   dispatch('showLoading')
   // 初始化SDK
+  SDK.NIM.use(WebRTCSDK) // 初始化IM时候加载音视频插件 然后再初始化音视频
+  // 初始化SDK
   window.nim = state.nim = SDK.NIM.getInstance({
-    debug: true,
+    //debug: true,
     appKey: config.appkey,
     account: loginInfo.uid,
     token: loginInfo.sdktoken,
     transports: ['websocket'],
     db: false,
-    // logFunc: new SDK.NIM.LoggerPlugin({
-    //   url: '/webdemo/h5/getlogger',
-    //   level: 'info'
-    // }),
     syncSessionUnread: true,
     syncRobots: true,
     autoMarkRead: true, // 默认为true
@@ -48,7 +49,7 @@ export function initNimSDK ({ state, commit, dispatch }, loginInfo) {
       // alert(JSON.stringify(event))
       debugger
       alert('网络连接状态异常')
-      location.href = config.loginUrl
+      // location.href = config.loginUrl
     },
     onwillreconnect: function onWillReconnect () {
       console.log(event)
@@ -57,7 +58,8 @@ export function initNimSDK ({ state, commit, dispatch }, loginInfo) {
       switch (error.code) {
         // 账号或者密码错误, 请跳转到登录页面并提示错误
         case 302:
-          pageUtil.turnPage('帐号或密码错误', 'login')
+          alert('帐号或密码错误')
+          // pageUtil.turnPage('帐号或密码错误', 'login')
           break
         // 被踢, 请提示错误后跳转到登录页面
         case 'kicked':
@@ -70,7 +72,8 @@ export function initNimSDK ({ state, commit, dispatch }, loginInfo) {
           }
           let str = error.from
           let errorMsg = `你的帐号于${util.formatDate(new Date())}被${(map[str] || '其他端')}踢出下线，请确定帐号信息安全!`
-          pageUtil.turnPage(errorMsg, 'login')
+          alert(errorMsg)
+          // pageUtil.turnPage(errorMsg, 'login')
           break
         default:
           break

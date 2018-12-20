@@ -27,7 +27,7 @@
         </cell>
         <!-- <RecyclerView
           :prerender="5"
-          :item="Cell" 
+          :item="Cell"
           :list="friendslist">
         </RecyclerView> -->
       </group>
@@ -88,7 +88,7 @@ export default {
 }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .p-contacts {
     .add-friend {
       background-color: #fff;

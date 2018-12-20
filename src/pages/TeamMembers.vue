@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-members{
     background-color: #e6ebf0;
   }

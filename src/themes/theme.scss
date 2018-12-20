@@ -43,9 +43,9 @@ $msg_tx_you: #fff;
 $msg_bg_me: #e5f4ff;
 $msg_tx_me: #666;
 
-@import './common/base.css';
-@import './common/grid.css';
-@import './common/weui.css';
-@import './common/module.css';
-@import './common/unit.css';
-@import './common/animation.css';
+@import './common/base.scss';
+@import './common/grid.scss';
+@import './common/weui.scss';
+@import './common/module.scss';
+@import './common/unit.scss';
+@import './common/animation.scss';

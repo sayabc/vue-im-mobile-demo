@@ -55,7 +55,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-room-chat-list {
     .m-chat-editor-main {
       .u-editor-input {
