@@ -145,11 +145,11 @@
         return this.$store.state.robotInfos
       },
       teamMsgUnRead() {
-        var obj = !this.isHistory 
-        && this.msg.needMsgReceipt 
-        && this.msg.flow==='out' 
+        var obj = !this.isHistory
+        && this.msg.needMsgReceipt
+        && this.msg.flow==='out'
         && this.$store.state.teamMsgReads.find(item => item.idServer === this.msg.idServer)
-        
+
         return obj ? parseInt(obj.unread) : -1
       }
     },
@@ -157,7 +157,7 @@
       let item = Object.assign({}, this.rawMsg)
       // 标记用户，区分聊天室、普通消息
       if (this.type === 'session') {
-        
+
         if (item.flow === 'in') {
           if (item.type === 'robot' && item.content && item.content.msgOut) {
             // 机器人下行消息
@@ -394,7 +394,7 @@
             // 显示的文本消息
             body
           })
-        } 
+        }
       },
       continueRobotMsg (robotAccid) {
         this.$store.dispatch('continueRobotMsg', robotAccid)
@@ -420,7 +420,7 @@
   }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-chat-history {
     .u-msg {
       .msg-link {

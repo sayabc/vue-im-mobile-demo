@@ -40,7 +40,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-teamlist {
     .m-list {
       padding-top: 3.6rem;
@@ -49,7 +49,7 @@ export default {
       position: absolute;
       left: 0;
       right: 0;
-      top: 5rem;  
+      top: 5rem;
       margin: auto;
       text-align: center;
     }

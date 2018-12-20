@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .chat-fullscreen, .chat-image img {
     top: 50%;
     left: 50%;

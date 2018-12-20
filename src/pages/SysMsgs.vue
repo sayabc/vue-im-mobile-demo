@@ -11,14 +11,14 @@
     <div class="m-article-main p-sysmsgs">
       <group class="u-list">
         <template v-for="msg in msgList">
-          <cell 
+          <cell
             v-if='msg.type ==="applyTeam" || msg.type ==="teamInvite"'
             class="u-list-item"
             :key="msg.idServer"
             :idServer ="msg.idServer"
             v-touch:swipeleft="showDelBtn"
             v-touch:swiperight="hideDelBtn"
-          > 
+          >
             <img class="icon" slot="icon" width="24" :src="msg.avatar">
             <div slot="child"  class='g-teamSys'>
               <div class='m-info'>
@@ -141,7 +141,7 @@ export default {
     msgList() {
       return this.sysType ===  0 ? this.sysMsgs : this.customSysMsgs
     }
-    
+
   },
   methods: {
     deleteMsg(idServer){
@@ -180,7 +180,7 @@ export default {
           return
       }
       this.$store.dispatch('delegateTeamFunction', {
-        functionName: action, 
+        functionName: action,
         options: {
           idServer: msg.idServer,
           teamId: msg.to,
@@ -218,7 +218,7 @@ export default {
 }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .p-sysmsgs {
     .u-list {
       height: 100%;
@@ -229,14 +229,14 @@ export default {
       word-break: break-all;
       color: #333;
     }
-    
+
     .g-teamSys {
       display: flex;
       flex-grow: 100;
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
-      
+
       .m-info {
         flex-shrink: 1;
         overflow: hidden;
@@ -256,13 +256,13 @@ export default {
       .m-options{
         display: flex;
         align-items: center;
-        
+
         .weui-btn.weui-btn_mini {
           padding: 0;
           width: 3rem;
           height: 2rem;
         }
-        
+
         .weui-btn + .weui-btn {
           margin-top: 0;
           margin-left: 0.5rem;
@@ -277,7 +277,7 @@ export default {
       position: absolute;
       left: 0;
       right: 0;
-      top: 5rem;  
+      top: 5rem;
       margin: auto;
       text-align: center;
     }

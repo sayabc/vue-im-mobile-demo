@@ -1,5 +1,7 @@
 let config = {
-  sdk: 'NIM_Web_SDK_v5.6.0',
+  // sdk: 'NIM_Web_SDK_v5.6.0',
+  sdk: 'NIM_Web_SDK_v5.9.0',
+  webrtcSDK: 'NIM_Web_WebRTC_v5.9.0',
   // 用户自定义的登录注册地址
   loginUrl: '/webdemo/h5/login.html',
   registUrl: '/webdemo/h5/regist.html',
@@ -29,11 +31,11 @@ let appConfig = {
   // 用户的appkey
   // 用于在web demo中注册账号异步请求demo 服务器中使用
   test: {
-    appkey: 'fe416640c8e8a72734219e1847ad2547',
+    appkey: "yuioiii",
     postUrl: 'https://apptest.netease.im'
   },
   online: {
-    appkey: '45c6af3c98409b18a84451215d0bdd6e',
+    appkey: '45c6af3c98409b18a84451215d0bdd6e', // 云信的测试账号
     postUrl: 'https://app.netease.im'
   }
 }
@@ -41,5 +43,3 @@ let appConfig = {
 config = Object.assign(config, appConfig[env])
 
 export default config
-
-

@@ -56,7 +56,7 @@ export default {
 }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .p-room-chat-online {
     position: relative;
     display: block;

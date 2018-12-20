@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .p-room-chat-actor {
     position: relative;
     width: 100%;

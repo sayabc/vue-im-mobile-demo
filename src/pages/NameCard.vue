@@ -125,7 +125,7 @@ export default {
 }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .p-namecard {
     .m-list {
       padding-top: 3.6rem;

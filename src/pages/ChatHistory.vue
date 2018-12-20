@@ -134,7 +134,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-chat-history {
     .m-chat-main {
       padding: 0;

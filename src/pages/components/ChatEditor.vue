@@ -331,7 +331,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .robot.m-chat-editor-main {
     /*.u-editor-input {
       padding-right: 4.5rem;

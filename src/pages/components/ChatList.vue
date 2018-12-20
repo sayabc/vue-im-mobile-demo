@@ -91,7 +91,7 @@
   }
 </script>
 
-<style type="text/css">
+<style lang='scss'>
   .p-chat-list {
     .u-icon {
       width: 1.4rem;

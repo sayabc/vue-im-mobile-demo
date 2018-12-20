@@ -44,7 +44,7 @@ export default {
       this.$store.state.teamMembers[teamId] && this.$store.state.teamMembers[teamId].forEach(item=>{
         if (item.account === account){
           member = Object.assign(member, item)
-        } 
+        }
         if(item.account === this.$store.state.userUID) {
           this.selfType = item.type
         }
@@ -118,7 +118,7 @@ export default {
       var account = this.member.account
       var store = this.$store
       var toast = this.$toast
-      
+
       var doneCallBack = (error, obj)=>{
         if(error) {
           this.$toast(error)
@@ -158,7 +158,7 @@ export default {
         inputType: inputType,
         updateKey: updateKey,
         teamId: this.teamId,
-        updateInfoInTeam: updateSelfNick ? true : false, 
+        updateInfoInTeam: updateSelfNick ? true : false,
         defaultValue: this.infoInTeam[updateKey],
         confirmCallback: updateSelfNick ? null : confirmCallback,
         enable: true
@@ -183,9 +183,9 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .g-body{
-    
+
   }
   .g-avatar{
     margin: 2rem auto;

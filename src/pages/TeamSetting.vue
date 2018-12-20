@@ -64,7 +64,7 @@ export default {
       this.$store.dispatch('showLoading')
       var action = this.config.updateInfoInTeam? 'updateInfoInTeam' : 'updateTeam'
       this.$store.dispatch('delegateTeamFunction',{
-        functionName: action, 
+        functionName: action,
         options: {
           teamId: this.config.teamId,
           [this.config.updateKey]: value ? value: this.inputModel,
@@ -86,7 +86,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
   .p-setting{
     background-color: #e6ebf0;
     padding-top: 4.6rem;

@@ -119,7 +119,7 @@ export default {
   },
   methods: {
     searchUsers(Accounts) {
-      this.$store.dispatch('searchUsers', 
+      this.$store.dispatch('searchUsers',
       {
         accounts: Accounts,
         done: (users) => {
@@ -144,7 +144,7 @@ export default {
     remove(e, member) {
       this.$store.dispatch('showLoading')
       this.$store.dispatch('delegateTeamFunction', {
-        functionName: 'removeTeamMembers', 
+        functionName: 'removeTeamMembers',
         options: {
           teamId: this.teamId,
           accounts: [member.account],
@@ -164,7 +164,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 
 .m-members {
   display: flex;
