@@ -94,7 +94,7 @@ export default {
       background-color: #fff;
     }
     .m-list {
-      padding-top: 8rem;
+      padding-top: 4rem;
     }
     .u-search-box-wrap {
       text-align: center;

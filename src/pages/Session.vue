@@ -8,15 +8,17 @@
       <cell class="u-list-item" title="我的手机" @click.native="enterMyChat">
         <img class="icon" slot="icon" width="24" :src="myPhoneIcon">
       </cell>
+      <!--
+        v-touch:swipeleft="showDelBtn"
+        v-touch:swiperight="hideDelBtn"
+      -->
       <cell
-        v-for="(session, index) in sessionlist"
+        v-for="(session) in sessionlist"
         class="u-list-item"
         :title="session.name"
         :inline-desc="session.lastMsgShow"
         :key="session.id"
         :sessionId="session.id"
-        v-touch:swipeleft="showDelBtn"
-        v-touch:swiperight="hideDelBtn"
         @click.native="enterChat(session)" >
         <img class="icon u-circle" slot="icon" width="24" :src="session.avatar">
         <span class='u-session-time'>

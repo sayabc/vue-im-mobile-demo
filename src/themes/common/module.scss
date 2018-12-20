@@ -6,7 +6,7 @@
 .g-window {
   .m-main, .m-album, .m-article, .m-room {
     position: absolute;
-    padding-top: $height_nav;
+    // padding-top: $height_nav;
     display: block;
     box-sizing: border-box;
     top: 0;
@@ -145,7 +145,7 @@
   .m-cards {
     position: relative;
     display: block;
-    width: 90%; 
+    width: 90%;
     height: auto;
     margin: 1rem auto;
     z-index: 1;
@@ -181,7 +181,7 @@
       position: relative;
       padding: 0;
       font-size: 1.3rem;
-      
+
       &.vux-button-group {
         margin: 4px auto;
       }

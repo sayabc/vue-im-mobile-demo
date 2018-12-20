@@ -6,9 +6,9 @@
     <tab-item @on-item-click="changePage" class="router-link">
       <router-link :to="{ name: 'contacts' }">通讯录</router-link>
     </tab-item>
-    <tab-item @on-item-click="changePage" class="router-link">
+    <!-- <tab-item @on-item-click="changePage" class="router-link">
       <router-link :to="{ name: 'room' }">直播间</router-link>
-    </tab-item>
+    </tab-item> -->
     <tab-item @on-item-click="changePage" class="router-link">
       <router-link :to="{ name: 'general' }">设置</router-link>
     </tab-item>

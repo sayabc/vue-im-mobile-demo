@@ -19,7 +19,7 @@ html, body, .g-window {
   .g-header {
     /* 移动端用fixed定位会有bug */
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     z-index: 5;
