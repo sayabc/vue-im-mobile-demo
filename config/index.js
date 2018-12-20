@@ -45,13 +45,15 @@ module.exports = {
 
   build: {
     // Template for index.html
-    index: path.resolve(__dirname, '../dist/index.html'),
+    // index: path.resolve(__dirname, '../dist/index.html'),
+    index: path.resolve(__dirname, '../docs/index.html'),
 
     // Paths
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    // assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../docs'),
     assetsSubDirectory: 'static',
     // assetsPublicPath: './',
-    assetsPublicPath: 'https://demo', // 线上静态资源打包地址
+    assetsPublicPath: '/vue-im-mobile-demo/', // 线上静态资源打包地址  使用github的 gh-pages服务 /docs/需要配置此项
 
     /**
      * Source Maps
